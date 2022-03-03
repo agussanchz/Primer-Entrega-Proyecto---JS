@@ -13,7 +13,6 @@ const iphone7plus = new Productos ("iPhone 7 plus", 300)
 const iphoneX  = new Productos ("iPhone X", 500)
 const iphone13 = new Productos ("iPhone 13", 1000)
 
-
 //Creacion productos Relojes
 const watchSerie6 = new Productos ("Watch Serie 6", 300)
 const watchSerie7 = new Productos ("Watch Serie 7", 400)
@@ -30,6 +29,13 @@ const allProducts = [iphone7plus, iphoneX, iphone13, watchSerie6, watchSerie7, a
 allProducts.push(appleTv = new Productos("Apple TV", 2000))
 allProducts.push(iPad = new Productos("iPad", 2400))
 
+//Metodo find
+const buscado = allProducts.find(producto => producto.precio === 500)
+console.log(buscado) 
+
+//Metodo filter
+const baratos = allProducts.filter(producto => producto.precio < 500)
+console.log(baratos)
 
 //VARIABLES
 let totalCompra;
@@ -51,6 +57,7 @@ function recorrer(){
 	alert(listaProductos)
 }
 recorrer()
+
 
 //Funcion para la cantidad de productos que desea comprar
 function cantidadIngresada(){
